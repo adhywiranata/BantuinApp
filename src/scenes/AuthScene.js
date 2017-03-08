@@ -5,6 +5,7 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
+import { Button } from 'native-base'
 
 const styles = StyleSheet.create({
   homeScene: {
@@ -37,19 +38,28 @@ const styles = StyleSheet.create({
   buttonText: {
     fontSize: 20,
     fontWeight: 'bold',
-  }
+  },
+  buttonGroup: {
+    width: '65%'
+  },
 });
 
-const AuthScene = () => (
+const AuthScene = props => (
   <View style={styles.homeScene}>
     <Text style={styles.logoText}>Bantu.in</Text>
     <Text style={styles.taglineText}>Bantu Siapa Aja, Dimana Aja</Text>
-    <TouchableOpacity style={styles.button}>
-      <Text style={styles.buttonText}>Login</Text>
-    </TouchableOpacity>
-    <TouchableOpacity style={styles.button}>
-      <Text style={styles.buttonText}>Register</Text>
-    </TouchableOpacity>
+    <View style={styles.buttonGroup} >
+      <Button light block
+        onPress={() => props.navigator.push({
+          name: 'home'
+        })}
+      >
+        <Text>Login</Text>
+      </Button>
+      <Button light block style={{marginTop: 10}}>
+        <Text>Register</Text>
+      </Button>
+    </View>
   </View>
 );
 
