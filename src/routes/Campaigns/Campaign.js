@@ -13,7 +13,7 @@ const Campaign = props => (
       <View style={{padding: 10}}>
         <View style={{width: '90%'}}>
           <Text style={{color: '#666666', fontSize: 14, }}>{props.user}</Text>
-          <H2 style={{color: '#353535', marginTop: 10, fontSize: 20,}}>
+          <H2 style={{color: '#353535', marginTop: 10, fontSize: 18,}}>
             {props.title}
           </H2>
           <Text style={{color: '#666666', fontSize: 12, }}>
@@ -21,6 +21,7 @@ const Campaign = props => (
           </Text>
         </View>
       </View>
+
       <View style={{width: '100%', padding: 10}}>
         <View style={{
             width: '100%',
@@ -32,18 +33,19 @@ const Campaign = props => (
             backgroundColor: '#DDD'}}>
             <View style={{
                 position: 'absolute',
-                width: '70%',
+                width: (props.obtained * 100 / props.target) + '%',
                 height: 6,
                 borderRadius: 8,
                 backgroundColor: 'teal'}}>
             </View>
         </View>
+
         <View style={{flexDirection: 'row', width: '100%', justifyContent: 'space-between'}}>
           <Text style={{color: '#666666', fontSize: 12, }}>
-            <Icon name="paper-plane" style={{fontSize: 16, color: 'teal'}}/> tercapai Rp. 30,000,000
+            <Icon name="paper-plane" style={{fontSize: 16, color: 'teal'}}/> tercapai Rp. {props.obtained.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')}
           </Text>
           <Text style={{color: '#666666', fontSize: 12, fontWeight: 'bold'}}>
-             <Icon name="trophy" style={{fontSize: 16, color: 'gold'}}/> Rp. 50,000,000
+             <Icon name="trophy" style={{fontSize: 16, color: 'gold'}}/> Rp. {props.target.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, '$1,')}
           </Text>
         </View>
         <View style={{width: '100%', height: 1, backgroundColor: '#rgba(0, 0, 0, 0.1)', marginTop: 10, marginBottom: 5,}}></View>

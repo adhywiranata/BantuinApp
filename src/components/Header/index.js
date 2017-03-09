@@ -1,24 +1,17 @@
 import React from 'react';
-import { Container, Header, Title, Button, Left, Right, Body, Icon } from 'native-base';
+import { Container, Header, Title, Button, Left, Right, Body, Icon, Item, Input, Text } from 'native-base';
 
 const AppHeader = props => (
   <Container>
-    <Header style={{backgroundColor: '#EB9532'}}>
-        <Left>
-            <Button transparent onPress={() => {
-                props.navigator.pop();
-              }}>
-                <Icon name='arrow-back' />
-            </Button>
-        </Left>
-        <Body>
-            <Title>Bantu.in</Title>
-        </Body>
-        <Right>
-            <Button transparent>
-                <Icon name='menu' />
-            </Button>
-        </Right>
+    <Header searchBar rounded style={{backgroundColor: '#EB9532'}}>
+        <Item>
+            <Icon name="search" />
+            <Input placeholder="Cari aja yang bisa kamu bantu.." />
+            <Icon active name="glasses" />
+        </Item>
+        <Button transparent>
+            <Text>Cari</Text>
+        </Button>
     </Header>
 </Container>
 );

@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   taglineText: {
     color: '#FFFFFF',
     fontSize: 20,
-    marginTop: -15,
+    marginTop: -5,
     marginBottom: 20,
   },
   button: {
@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
 const AuthScene = props => (
   <View style={styles.homeScene}>
     <Text style={styles.logoText}>Bantu.in</Text>
-    <Text style={styles.taglineText}>Bantu Siapa Aja, Dimana Aja</Text>
+    <Text style={styles.taglineText}>Bantu Karya Siapa Aja, Dimana Aja</Text>
     <View style={styles.buttonGroup} >
       <Button light block
         onPress={() => props.navigator.push({
