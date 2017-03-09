@@ -58,7 +58,9 @@ const Campaign = props => (
           <Text>Saya mau Dukung</Text>
         </Button>
         <Button block style={{margin: '2.5%', width: '45%', backgroundColor: 'darkgrey'}}>
-          <Text>Bookmark</Text>
+          <Text>
+            Bookmark
+          </Text>
         </Button>
       </View>
       </Body>

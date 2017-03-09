@@ -12,6 +12,7 @@ const data = [
     description: 'Batik adalah kerajinan budaya dari daerah Jawa yang dilestarikan hingga sekarang. bantu Tenun Foundation untuk sebuah project bernama Batik Tenun Pekalongan untuk membuat 1000 kain batik tradisional!',
     target: 50000000,
     obtained: 30000000,
+    location: 'Pekalongan',
   },
   {
     id: 2,
@@ -21,6 +22,7 @@ const data = [
     description: 'Lorem Ipsum Dolor Sit Amet',
     target: 5000000,
     obtained: 4000000,
+    location: 'Magelang',
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ const data = [
     description: 'Lorem Ipsum Dolor Sit Amet',
     target: 10000000,
     obtained: 100000,
+    location: 'Yogyakarta',
   },
 ];
 
