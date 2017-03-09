@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 
 import AppHeader from '../components/Header';
+//import AppFooter from '../components/AppFooter';
 import { Campaigns } from '../routes';
 
 const styles = StyleSheet.create({
