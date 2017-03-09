@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 
 import AppHeader from '../components/Header';
-//import AppFooter from '../components/AppFooter';
+import AppFooter from '../components/AppFooter';
 import { Campaigns } from '../routes';
 
 const styles = StyleSheet.create({
@@ -23,9 +23,10 @@ const styles = StyleSheet.create({
 const HomeScene = props => (
   <View style={styles.homeScene}>
     <AppHeader navigator={props.navigator} />
-    <View style={{height: '100%', paddingTop: 55}}>
+    <View style={{height: '100%', paddingTop: 50, paddingBottom: 50, }}>
       <Campaigns navigator={props.navigator} />
     </View>
+    <AppFooter />
   </View>
 );
 
